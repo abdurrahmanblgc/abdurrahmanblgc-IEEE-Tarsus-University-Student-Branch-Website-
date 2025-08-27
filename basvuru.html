@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topluluğa Katıl - IEEE Tarsus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .basvuru-container {
+            max-width: 800px;
+            margin: 120px auto 60px auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .basvuru-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #1a2341;
+        }
+        
+        .basvuru-subtitle {
+            font-size: 1.2rem;
+            color: #3d4766;
+            margin-bottom: 50px;
+            line-height: 1.6;
+        }
+        
+        .form-container {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 24px;
+            padding: 50px 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .form-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a2341;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #1a2341;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 15px 18px;
+            border: 2px solid #e1e5e9;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #fff;
+            box-sizing: border-box;
+            color: #000;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #00629B;
+            box-shadow: 0 0 0 3px rgba(0, 98, 155, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #00629B, #00B5E2);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 98, 155, 0.3);
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 98, 155, 0.4);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+        
+        .info-section {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .info-section h3 {
+            color: #1a2341;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .info-section p {
+            color: #3d4766;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .benefit-item {
+            background: linear-gradient(135deg, #00629B, #00B5E2);
+            color: white;
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+        }
+        
+        .benefit-item i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .benefit-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        
+        .benefit-item p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .basvuru-container {
+                margin: 100px auto 40px auto;
+                padding: 20px 15px;
+            }
+            
+            .basvuru-title {
+                font-size: 2rem;
+            }
+            
+            .form-container {
+                padding: 30px 20px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="uni-logo.png" alt="Tarsus University Logo" class="logo">
+        </div>
+        <div class="navbar-toggle" id="navbar-toggle">&#9776;</div>
+        <ul class="navbar-menu" id="navbar-menu">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li class="dropdown">
+              <a href="#">Hakkımızda</a>
+              <ul class="dropdown-menu">
+                  <li><a href="yonetim.html">Yönetim Kurulu</a></li>
+                  <li><a href="idari.html">İdari Kurul</a></li>
+                  <li><a href="tuzuk.html">Güncel Tüzük</a></li>
+                  <li><a href="basvuru.html">Topluluğa Katıl</a></li>
+              </ul>
+          </li>
+            <li class="dropdown">
+                <a href="#">Komitelerimiz</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Computer Science</a></li>
+                    <li><a href="#">Endüstri Topluluğu</a></li>
+                </ul>
+            </li>
+            <li><a href="yonetim.html">Yönetim Kadromuz</a></li>
+            <li><a href="#" id="events-link">Etkinliklerimiz</a></li>
+            <li><a href="#" id="sponsor-link">Sponsorlar</a></li>
+            <li><a href="#" id="contact-link">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <div class="basvuru-container">
+        <h1 class="basvuru-title">TOPLULUĞA KATIL</h1>
+        <p class="basvuru-subtitle">IEEE Tarsus University Student Branch'e üye ol ve geleceğini şekillendir</p>
+        
+        <div class="form-container">
+            <h2 class="form-title">Üyelik Başvuru Formu</h2>
+            
+            <form action="https://formspree.io/f/mkgvwvdn" method="POST" id="membership-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">Ad *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Soyad *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-posta Adresi *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="studentNumber">Öğrenci Numarası *</label>
+                        <input type="text" id="studentNumber" name="studentNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon Numarası *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Başvuruyu Gönder
+                </button>
+            </form>
+        </div>
+        
+        <div class="info-section">
+            <h3>🎯 IEEE Tarsus'a Katılmanın Avantajları</h3>
+            <p>IEEE Tarsus University Student Branch'e üye olarak aşağıdaki fırsatlardan yararlanabilirsin:</p>
+            
+            <div class="benefits">
+                <div class="benefit-item">
+                    <i class="fas fa-users"></i>
+                    <h4>Networking</h4>
+                    <p>Sektör profesyonelleri ve öğrencilerle tanış</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>Eğitim</h4>
+                    <p>Teknik seminerler ve workshop'lara katıl</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-briefcase"></i>
+                    <h4>Kariyer</h4>
+                    <p>Staj ve iş fırsatlarını keşfet</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-globe"></i>
+                    <h4>Uluslararası</h4>
+                    <p>IEEE global ağına dahil ol</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-trophy"></i>
+                    <h4>Başarı</h4>
+                    <p>Proje yarışmalarında ödül kazan</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>İnovasyon</h4>
+                    <p>Yaratıcı projeler geliştir</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="uni-logo.png " alt="Logo" class="footer-logo">
+                <p>Tarsus Üniversitesi <br>
+                    Takbaş, Kartaltepe Sokak 33400<br>33400 Tarsus/Mersin<br></p>
+            </div>
+            <div class="footer-col">
+                <h4>Sosyal Medya Hesaplarımız</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/company/ieee-tarsus-university-student-branch"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> İnstagram</a></li>
+                    <li><a href="mailto:ieee@tarsus.edu.tr"><i class="fas fa-envelope"></i> Email</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Ana sayfa</h4>
+                <ul>
+                    <li><a href="#">Hakkımızda</a></li>
+                    <li><a href="#">Komitelerimiz</a></li>
+                    <li><a href="#">Yönetim Kadromuz</a></li>
+                    <li><a href="#">Etkinliklerimiz</a></li>
+                    <li><a href="#">Sponsorlar</a></li>
+                    <li><a href="#">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Topluluğa Katıl</h4>
+                <p>Topluluğa katılmak için form gönder!</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email">
+                    <button type="submit">Gönder</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>Copyright © 2025 IEEE Tarsus University Student Branch.</span>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menü aç/kapat
+        const navbarToggle = document.getElementById('navbar-toggle');
+        const navbarMenu = document.getElementById('navbar-menu');
+        const dropdowns = document.querySelectorAll('.navbar-menu .dropdown');
+        
+        navbarToggle.addEventListener('click', function() {
+            navbarMenu.classList.toggle('open');
+        });
+        
+        // Mobilde dropdown aç/kapat
+        if (window.innerWidth <= 900) {
+            dropdowns.forEach(drop => {
+                drop.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    this.classList.toggle('open');
+                });
+            });
+        }
+
+        // Form gönderimi
+        document.getElementById('membership-form').addEventListener('submit', function(e) {
+            // Form verilerini al
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Formspree'e gönder ve başarı mesajı göster
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Başvurunuz başarıyla alındı! En kısa sürede size dönüş yapacağız.');
+                    this.reset();
+                } else {
+                    alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+                }
+            })
+            .catch(error => {
+                alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+                console.error('Error:', error);
+            });
+        });
+
+        // Smooth scroll için event listener'lar
+        document.getElementById('events-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'index.html#events';
+        });
+
+        document.getElementById('sponsor-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'index.html#sponsors';
+        });
+
+        document.getElementById('contact-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'index.html#contact';
+        });
+    </script>
+</body>
+</html>

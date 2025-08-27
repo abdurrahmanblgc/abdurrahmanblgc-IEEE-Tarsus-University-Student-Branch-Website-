@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="total.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+</head>
+<style>
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    background: rgba(10, 20, 40, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.divider {
+    width: 2px;
+    height: 38px;
+    background: #fff3;
+    margin: 0 8px;
+}
+.navbar-branch {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    font-size: 13px;
+    color: #b0c4de;
+    line-height: 1.1;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    list-style: none;
+    margin-right: 4%;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+.navbar-menu li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.2s;
+    padding: 10px 18px;
+    border-radius: 8px;
+    display: block;
+}
+
+.navbar-menu li a:hover {
+    color: #00bfff;
+    background: rgba(255,255,255,0.08);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px #0002;
+    border-radius: 0 0 16px 16px;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu li a {
+    color: #1e3c72;
+    background: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 15px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-menu li a:hover {
+    background: rgba(46,230,230,0.12);
+    color: #0164ad;
+}
+
+.navbar-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background: none;
+    position: relative;
+    overflow: hidden;
+}
+.hero-bg-section {
+  position: relative;
+}
+.hero-bg-section .hero-bg::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9); /* Karartma oranı */
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 1;
+}
+.hero > *:not(.hero-bg) {
+  position: relative;
+  z-index: 2;
+}
+
+.hero {
+  background: url('cs.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+#hero-subtittles {
+  position: relative;
+  margin-top: 0;
+  color: #fff;
+  text-shadow: 0 2px 8px #0008;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.logo-cs{
+    height: 40px;
+    width: auto;
+}
+.logo {
+    height: 100px;
+    width: auto;
+    border-radius: 6px;
+    padding: 2px 6px;
+    margin-top: 5%;
+}
+
+.cs-profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.cs-profile-card {
+  margin-top: 5%;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.cs-profile-img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 32px #0002;
+  border: 6px solid #fff;
+  background: #fff;
+}
+
+.cs-profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 28px 0 6px 0;
+  color: #222;
+  text-align: center;
+}
+
+.cs-profile-title {
+  font-size: 1.1rem;
+  color: #888;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.cs-profile-socials {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.cs-social {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  color: #fff;
+  transition: background 0.2s, transform 0.2s;
+  background: #0077b5; /* Varsayılan LinkedIn rengi */
+  text-decoration: none;
+}
+
+.cs-linkedin { background: #0077b5; }
+.cs-gmail { background: #db4437; }
+.cs-instagram { background: #c13584; }
+
+.cs-social:hover {
+  transform: scale(1.12);
+  filter: brightness(1.1);
+}
+
+.cs-profile-info {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 5% !important;
+}
+
+.cs-profile-info h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 32px;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.cs-profile-info p {
+  font-size: 1.05rem;
+  color: #222;
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+body, html {
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* IE ve Edge */
+}
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+  display: none;                 /* Chrome, Safari, Opera */
+}
+
+.footer {
+  background: #0f0140;
+  color: #fff;
+  padding: 48px 0 0 0;
+  margin-top: 0;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 32px;
+  padding: 0 24px;
+  justify-content: space-between;
+}
+.footer-col {
+  flex: 1 1 200px;
+  min-width: 200px;
+  margin-bottom: 32px;
+}
+.footer-logo {
+  width: 140px;
+  margin-bottom: 18px;
+}
+.footer-col h4 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+.footer-col ul li a {
+  color: #b0c4de;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.footer-col ul li a:hover {
+  color: #fff;
+}
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.newsletter-form input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+.newsletter-form button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.newsletter-form button:hover {
+  background: #1d4ed8;
+}
+.footer-bottom {
+  border-top: 1px solid #222;
+  margin-top: 16px;
+  padding: 18px 0;
+  text-align: center;
+  color: #b0c4de;
+  font-size: 0.98rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer-bottom a {
+  color: #b0c4de;
+  text-decoration: underline;
+  margin: 0 4px;
+  font-size: 0.98rem;
+}
+.footer-bottom a:hover {
+  color: #fff;
+}
+.footer-col img {
+  margin-bottom: 0px;
+}
+.footer-col p {
+  margin-top: 0px;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 16px;
+    height: 60px;
+  }
+  .logo {
+    height: 90px;
+    margin-top: 0;
+  }
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    background: rgba(10, 20, 40, 0.97);
+    box-shadow: 0 8px 32px #0003;
+    z-index: 99;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+  }
+  .navbar-menu.open {
+    display: flex;
+  }
+  .navbar-menu li {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #fff2;
+    padding: 0;
+  }
+  .navbar-menu li a {
+    display: block;
+    padding: 18px 24px;
+    font-size: 1.1rem;
+  }
+  .navbar-toggle {
+    display: block;
+    position: absolute;
+    right: 32px;
+    top: 8px;
+    z-index: 100;
+  }
+  .navbar-left {
+    flex: 1;
+    min-width: 0;
+  }
+  .navbar {
+    flex-wrap: nowrap;
+  }
+  .navbar-menu .dropdown-menu {
+    position: static;
+    min-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(6px);
+    display: none;
+  }
+  .navbar-menu .dropdown.open .dropdown-menu {
+    display: block;
+  }
+  .cs-profile-info{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .footer-col{
+    margin: 0px;
+  }
+  .footer-container{
+    gap: 12px;
+  }
+  .footer-col img{
+    width: 50%;
+    height: auto;
+  }
+  .navbar-left img {
+    width: 30%;
+    height: auto;
+  }
+  .navbar-toggle{
+    margin-right: 4%;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .navbar-menu li:not(:first-child) {
+    display: none !important;
+  }
+}
+
+</style>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="uni-logo.png" alt="Tarsus University Logo" class="logo">
+            <img src="cs.png" alt="CS Logo" class="logo-cs">
+        </div>
+        <div class="navbar-toggle" id="navbar-toggle">&#9776;</div>
+        <ul class="navbar-menu" id="navbar-menu">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li class="dropdown">
+              <a href="#">Hakkımızda</a>
+              <ul class="dropdown-menu">
+                  <li><a href="yonetim.html">Yönetim Kurulu</a></li>
+                  <li><a href="idari.html">İdari Kurul</a></li>
+                  <li><a href="tuzuk.html">Güncel Tüzük</a></li>
+                  <li><a href="basvuru.html">Topluluğa Katıl</a></li>
+              </ul>
+          </li>
+            <li class="dropdown">
+                <a href="#">Komitelerimiz</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Computer Science</a></li>
+                    <li><a href="#">Endüstri Topluluğu</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Yönetim Kadromuz</a></li>
+            <li><a href="#">Etkinliklerimiz</a></li>
+            <li><a href="#">Sponsorlar</a></li>
+            <li><a href="#">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <main class="hero">
+        <h1 id="hero-subtittles">IEEE Tarsus COMPUTER SCİENE</h1>
+    </main>
+
+
+    <div class="cs-profile-card">
+        <img src="floating1.jpg" alt="Abdurrahman Bilgiç" class="cs-profile-img">
+        <h2 class="cs-profile-name">Abdurrahman Bilgiç</h2>
+        <div class="cs-profile-title">CS Komite Koordinatörü</div>
+        <div class="cs-profile-socials">
+          <a href="#" class="cs-social cs-linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="cs-social cs-gmail" title="Gmail"><i class="fab fa-google"></i></a>
+          <a href="#" class="cs-social cs-instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="cs-profile-info">
+        <h3>IEEE CS Nedir ?</h3>
+        <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque pariatur officia, itaque voluptatem dolore ipsam quod autem ipsa aliquid aperiam maiores facilis a quis nobis quae, sapiente deserunt dolores exercitationem suscipit? Enim neque dolore, hic debitis sequi placeat, officiis impedit provident quod reprehenderit eius velit quibusdam magnam sed vitae officia.
+        </p>
+        <h3>IEEE Tarsus CS Nedir ?</h3>
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non soluta veniam praesentium enim placeat fugit voluptatum sapiente quod sunt similique, libero earum debitis reprehenderit temporibus pariatur eius qui amet perferendis voluptate molestiae modi blanditiis consequatur. Velit, vero hic dolorem officiis atque rem a voluptatem provident, quasi sapiente similique distinctio cupiditate.
+        </p>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-col">
+            <img src="uni-logo.png " alt="Logo" class="footer-logo">
+            <p>Tarsus Üniversitesi <br>
+              Takbaş, Kartaltepe Sokak 33400<br>33400 Tarsus/Mersin<br></p>
+          </div>
+          <div class="footer-col">
+            <h4>Sosyal Medya Hesaplarımız</h4>
+            <ul>
+              <li><a href="#"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i> İnstagram</a></li>
+              <li><a href="#"><i class="fas fa-envelope"></i> Email</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Ana sayfa</h4>
+            <ul>
+              <li><a href="#">Hakkımızda</a></li>
+              <li><a href="#">Komitelerimiz</a></li>
+              <li><a href="#">Yönetim Kadromuz</a></li>
+              <li><a href="#">Etkinliklerimiz</a></li>
+              <li><a href="#">Sponsorlar</a></li>
+              <li><a href="#">İletişim</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Topluluğa Katıl</h4>
+            <p>Topluluğa katılmak için form gönder!</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Email">
+              <button type="submit">Gönder</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>Copyright © 2025 IEEE Tarsus University Student Branch.</span>
+        </div>
+      </footer>
+
+  
+      <script>
+    const navbarToggle = document.getElementById('navbar-toggle');
+  const navbarMenu = document.getElementById('navbar-menu');
+  const dropdowns = document.querySelectorAll('.navbar-menu .dropdown');
+
+  if (navbarToggle && navbarMenu) {
+    navbarToggle.addEventListener('click', function() {
+      navbarMenu.classList.toggle('open');
+    });
+  }
+
+  // Mobilde dropdown aç/kapat
+  if (window.innerWidth <= 900) {
+    dropdowns.forEach(drop => {
+      drop.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('open');
+      });
+    });
+  }
+      </script>
+      
+
+</body>
+</html>

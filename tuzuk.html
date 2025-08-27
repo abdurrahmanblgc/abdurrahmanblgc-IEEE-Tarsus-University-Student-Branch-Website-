@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Güncel Tüzük - IEEE Tarsus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .tuzuk-container {
+            max-width: 800px;
+            margin: 120px auto 60px auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .tuzuk-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #1a2341;
+        }
+        
+        .tuzuk-subtitle {
+            font-size: 1.2rem;
+            color: #3d4766;
+            margin-bottom: 50px;
+            line-height: 1.6;
+        }
+        
+        .tuzuk-box {
+            background: linear-gradient(135deg, #00629B, #00B5E2);
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 10px 30px rgba(0, 98, 155, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 40px;
+        }
+        
+        .tuzuk-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 98, 155, 0.4);
+        }
+        
+        .tuzuk-icon {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .tuzuk-text {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .tuzuk-description {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .download-info {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        
+        .download-info h3 {
+            color: #1a2341;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .download-info p {
+            color: #3d4766;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .tuzuk-container {
+                margin: 100px auto 40px auto;
+                padding: 20px 15px;
+            }
+            
+            .tuzuk-title {
+                font-size: 2rem;
+            }
+            
+            .tuzuk-box {
+                padding: 40px 20px;
+            }
+            
+            .tuzuk-icon {
+                font-size: 3rem;
+            }
+            
+            .tuzuk-text {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="uni-logo.png" alt="Tarsus University Logo" class="logo">
+        </div>
+        <div class="navbar-toggle" id="navbar-toggle">&#9776;</div>
+        <ul class="navbar-menu" id="navbar-menu">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li class="dropdown">
+              <a href="#">Hakkımızda</a>
+              <ul class="dropdown-menu">
+                  <li><a href="yonetim.html">Yönetim Kurulu</a></li>
+                  <li><a href="idari.html">İdari Kurul</a></li>
+                  <li><a href="tuzuk.html">Güncel Tüzük</a></li>
+                  <li><a href="basvuru.html">Topluluğa Katıl</a></li>
+              </ul>
+          </li>
+            <li class="dropdown">
+                <a href="#">Komitelerimiz</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Computer Science</a></li>
+                    <li><a href="#">Endüstri Topluluğu</a></li>
+                </ul>
+            </li>
+            <li><a href="yonetim.html">Yönetim Kadromuz</a></li>
+            <li><a href="#" id="events-link">Etkinliklerimiz</a></li>
+            <li><a href="#" id="sponsor-link">Sponsorlar</a></li>
+            <li><a href="#" id="contact-link">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <div class="tuzuk-container">
+        <h1 class="tuzuk-title">GÜNCEL TÜZÜK</h1>
+        <p class="tuzuk-subtitle">IEEE Tarsus University Student Branch'in güncel tüzük ve yönetmeliklerini inceleyin</p>
+        
+        <div class="tuzuk-box" onclick="openTuzuk()">
+            <div class="tuzuk-icon">
+                <i class="fas fa-file-pdf"></i>
+            </div>
+            <div class="tuzuk-text">Tüzüğü Görüntüle</div>
+            <div class="tuzuk-description">IEEE Tarsus'un güncel tüzük ve yönetmeliklerini PDF formatında indirin</div>
+        </div>
+        
+        <div class="download-info">
+            <h3>📋 Tüzük Hakkında</h3>
+            <p>Bu tüzük, IEEE Tarsus University Student Branch'in kuruluş amacını, yapısını, yönetim organlarını ve çalışma prensiplerini belirler. Tüm üyelerimizin bu tüzüğe uygun hareket etmesi beklenmektedir.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="uni-logo.png " alt="Logo" class="footer-logo">
+                <p>Tarsus Üniversitesi <br>
+                    Takbaş, Kartaltepe Sokak 33400<br>33400 Tarsus/Mersin<br></p>
+            </div>
+            <div class="footer-col">
+                <h4>Sosyal Medya Hesaplarımız</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/company/ieee-tarsus-university-student-branch"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> İnstagram</a></li>
+                    <li><a href="mailto:ieee@tarsus.edu.tr"><i class="fas fa-envelope"></i> Email</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Ana sayfa</h4>
+                <ul>
+                    <li><a href="#">Hakkımızda</a></li>
+                    <li><a href="#">Komitelerimiz</a></li>
+                    <li><a href="#">Yönetim Kadromuz</a></li>
+                    <li><a href="#">Etkinliklerimiz</a></li>
+                    <li><a href="#">Sponsorlar</a></li>
+                    <li><a href="#">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Topluluğa Katıl</h4>
+                <p>Topluluğa katılmak için form gönder!</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email">
+                    <button type="submit">Gönder</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>Copyright © 2025 IEEE Tarsus University Student Branch.</span>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menü aç/kapat
+        const navbarToggle = document.getElementById('navbar-toggle');
+        const navbarMenu = document.getElementById('navbar-menu');
+        const dropdowns = document.querySelectorAll('.navbar-menu .dropdown');
+        
+        navbarToggle.addEventListener('click', function() {
+            navbarMenu.classList.toggle('open');
+        });
+        
+        // Mobilde dropdown aç/kapat
+        if (window.innerWidth <= 900) {
+            dropdowns.forEach(drop => {
+                drop.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    this.classList.toggle('open');
+                });
+            });
+        }
+
+        // Tüzük dosyasını aç
+        function openTuzuk() {
+            // PDF dosyasını indir
+            const link = document.createElement('a');
+            link.href = 'tuzuk.pdf';
+            link.download = 'tuzuk.pdf';
+            link.target = '_blank';
+            
+            // Dosya var mı kontrol et
+            fetch('tuzuk.pdf')
+                .then(response => {
+                    if (response.ok) {
+                        // Dosya varsa indir
+                        link.click();
+                    } else {
+                        // Dosya yoksa uyarı göster
+                        alert('Tüzük dosyası henüz yüklenmedi. Lütfen daha sonra tekrar deneyin.');
+                    }
+                })
+                .catch(error => {
+                    alert('Tüzük dosyası henüz yüklenmedi. Lütfen daha sonra tekrar deneyin.');
+                });
+        }
+
+        // Smooth scroll için event listener'lar
+        document.getElementById('events-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'index.html#events';
+        });
+
+        document.getElementById('sponsor-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'index.html#sponsors';
+        });
+
+        document.getElementById('contact-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'index.html#contact';
+        });
+    </script>
+</body>
+</html>

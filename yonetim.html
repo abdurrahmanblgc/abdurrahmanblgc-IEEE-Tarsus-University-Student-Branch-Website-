@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our leadership team</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+      color: #1a2341;
+    }
+    .team-section {
+      max-width: 1100px;
+      margin: 48px auto 0 auto;
+      padding: 90px 16px 48px 16px;
+      text-align: center;
+      
+    }
+    .team-section h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #1a2341;
+    }
+    .team-section p {
+      color: #3d4766;
+      font-size: 1.1rem;
+      margin-bottom: 38px;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 200px 32px;
+      justify-items: center;
+      margin-top: 15%;
+    }
+    .team-card {
+      width: 270px;
+      height: 270px;
+      box-shadow: 0 4px 24px #0001;
+      padding: 32px 18px 0 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.18s, box-shadow 0.18s;
+      position: relative;
+      overflow: visible;
+      background: #00629B;
+      min-width: 0;
+      min-height: 0;
+      box-sizing: border-box;
+    }
+    .team-card.bg1,
+    .team-card.bg2,
+    .team-card.bg3,
+    .team-card.bg4 {
+      background: #00629B;
+    }
+    .team-card.bg5,
+    .team-card.bg6,
+    .team-card.bg7,
+    .team-card.bg8,
+    .team-card.bg9 {
+      background: #00B5E2;
+    }
+    .team-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 32px #0002;
+    }
+    .team-photo {
+      width: 120%;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      z-index: 2;
+      pointer-events: none;
+      background: none;
+    }
+    .team-name {
+      font-size: 1.13rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #1a2341;
+      margin-top: 16px;
+    }
+    .team-title {
+      font-size: 0.98rem;
+      color: #6b7280;
+      margin-bottom: 0;
+      letter-spacing: 0.5px;
+    }
+    .team-card-content {
+      padding-bottom: 60px;
+      width: 100%;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .team-card-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: 1200px) {
+      .team-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .team-card { width: 220px; height: 220px; }
+    }
+    @media (max-width: 600px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .team-section h1 { font-size: 1.5rem; }
+      .team-card { width: 90vw; height: 90vw; max-width: 320px; max-height: 320px; }
+    }
+    @media (max-width: 768px) {
+     .team-grid{
+      margin-top: 40% !important;
+     }
+     .navbar-menu li:not(:first-child) {
+        display: none !important;
+      }
+    }
+    .team-card.bg3 img {
+      height: 140%;
+      width: auto;
+    }
+    
+    /* Sosyal medya ikonları için stiller */
+    .social-links {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      color: #00629B;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .social-link:hover {
+      background: #fff;
+      color: #00B5E2;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .social-link i {
+      font-size: 16px;
+    }
+    
+    /* Mail ikonu için özel stil */
+    .social-link .fa-envelope {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="uni-logo.png" alt="Tarsus University Logo" class="logo">
+        </div>
+        <div class="navbar-toggle" id="navbar-toggle">&#9776;</div>
+        <ul class="navbar-menu" id="navbar-menu">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li class="dropdown">
+              <a href="#">Hakkımızda</a>
+              <ul class="dropdown-menu">
+                  <li><a href="#">Yönetim Kurulu</a></li>
+                  <li><a href="idari.html">İdari Kurul</a></li>
+  
+                  <li><a href="tuzuk.html">Güncel Tüzük</a></li>
+                  <li><a href="basvuru.html">Topluluğa Katıl</a></li>
+              </ul>
+          </li>
+            <li class="dropdown">
+                <a href="#">Komitelerimiz</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Computer Science</a></li>
+                    <li><a href="#">Endüstri Topluluğu</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Yönetim Kadromuz</a></li>
+            <li><a href="#">Etkinliklerimiz</a></li>
+            <li><a href="#">Sponsorlar</a></li>
+            <li><a href="#">İletişim</a></li>
+        </ul>
+    </nav>
+
+
+  <section class="team-section">
+    <h1>YÖNETİM KADROMUZ İLE TANIŞIN</h1>
+    <p>Güçlü bir ekip, güçlü bir gelecek. </p>
+    <div class="team-grid">
+      <div class="team-card-wrapper">
+        <div class="team-card bg1">
+          <img src="img/berkay-removebg-preview.png" class="team-photo" alt="Muhammed berkay kırnıt">
+        </div>
+        <div class="team-card-content">
+          <div class="team-name">Muhammed Berkay Kırnıt</div>
+          <div class="team-title">Yönetim Kurulu Başkanı</div>
+          <div class="social-links">
+            <a href="mailto:berkaykirnit01@outlook.com" class="social-link">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mberkayk%C4%B1rn%C4%B1t/" target="_blank" class="social-link">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card-wrapper">
+        <div class="team-card bg2">
+          <img src="img/emre-removebg-preview.png" class="team-photo" alt="emre olcay aras">
+        </div>
+        <div class="team-card-content">
+            <div class="team-name">Emre Olcay Aras</div>
+            <div class="team-title">Yönetim Kurulu Başkan Yardımcısı</div>
+            <div class="social-links">
+              <a href="mailto:emreolcayaras@gmail.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/emre-olcay-aras-778615359" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+      </div>
+      <div class="team-card-wrapper">
+        <div class="team-card bg3">
+          <img src="img/fatih-remove-bg.png" class="team-photo" alt="fatih Arslan">
+        </div>
+        <div class="team-card-content">
+            <div class="team-name">Fatih Arslan</div>
+            <div class="team-title">Yönetim Kurulu Başkan Yardımcısı</div>
+            <div class="social-links">
+              <a href="mailto:fatiharslanmac@outlook.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/fatih-arslan-b9797b380/" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+      </div>
+      <div class="team-card-wrapper">
+        <div class="team-card bg4">
+          <img src="img/kadir-removebg-preview.png" class="team-photo" alt="kadircan aslan">
+        </div>
+        <div class="team-card-content">
+            <div class="team-name">Kadircan Aslan</div>
+            <div class="team-title">Genel Sekreter</div>
+            <div class="social-links">
+              <a href="mailto:aslankadircan0@gmail.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/kadircan-aslan-3a8478293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+      </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <img src="uni-logo.png " alt="Logo" class="footer-logo">
+        <p>Tarsus Üniversitesi <br>
+          Takbaş, Kartaltepe Sokak 33400<br>33400 Tarsus/Mersin<br></p>
+      </div>
+      <div class="footer-col">
+        <h4>Sosyal Medya Hesaplarımız</h4>
+        <ul>
+          <li><a href="#"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> İnstagram</a></li>
+          <li><a href="#"><i class="fas fa-envelope"></i> Email</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Ana sayfa</h4>
+        <ul>
+          <li><a href="#">Hakkımızda</a></li>
+          <li><a href="#">Komitelerimiz</a></li>
+          <li><a href="#">Yönetim Kadromuz</a></li>
+          <li><a href="#">Etkinliklerimiz</a></li>
+          <li><a href="#">Sponsorlar</a></li>
+          <li><a href="#">İletişim</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Topluluğa Katıl</h4>
+        <p>Topluluğa katılmak için form gönder!</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Email">
+          <button type="submit">Gönder</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright © 2025 IEEE Tarsus University Student Branch.</span>
+    </div>
+  </footer>
+
+
+  <script>
+    const navbarToggle = document.getElementById('navbar-toggle');
+  const navbarMenu = document.getElementById('navbar-menu');
+  const dropdowns = document.querySelectorAll('.navbar-menu .dropdown');
+
+  if (navbarToggle && navbarMenu) {
+    navbarToggle.addEventListener('click', function() {
+      navbarMenu.classList.toggle('open');
+    });
+  }
+
+  // Mobilde dropdown aç/kapat
+  if (window.innerWidth <= 900) {
+    dropdowns.forEach(drop => {
+      drop.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('open');
+      });
+    });
+  }
+      </script>
+</body>
+</html>

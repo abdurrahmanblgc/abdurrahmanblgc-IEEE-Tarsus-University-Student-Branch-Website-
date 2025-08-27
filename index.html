@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="total.js">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="uni-logo.png" alt="Tarsus University Logo" class="logo">
+        </div>
+        <div class="navbar-toggle" id="navbar-toggle">&#9776;</div>
+        <ul class="navbar-menu" id="navbar-menu">
+            <li><a href="#">Ana Sayfa</a></li>
+            <li class="dropdown">
+              <a href="#">Hakkımızda</a>
+              <ul class="dropdown-menu">
+                  <li><a href="yonetim.html">Yönetim Kurulu</a></li>
+                  <li><a href="idari.html">İdari Kurul</a></li>
+                  <li><a href="tuzuk.html">Güncel Tüzük</a></li>
+                  <li><a href="basvuru.html">Topluluğa Katıl</a></li>
+              </ul>
+          </li>
+            <li class="dropdown">
+                <a href="#">Komitelerimiz</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Computer Science</a></li>
+                    <li><a href="#">Endüstri Topluluğu</a></li>
+                </ul>
+            </li>
+            <li><a href="yonetim.html">Yönetim Kadromuz</a></li>
+            <li><a href="#" id="events-link">Etkinliklerimiz</a></li>
+            <li><a href="#" id="sponsor-link">Sponsorlar</a></li>
+            <li><a href="#" id="contact-link">İletişim</a></li>
+        </ul>
+    </nav>
+   
+        <main class="hero">
+            <img src="image1.jpg" alt="Arka Plan" class="hero-bg">
+            <h1>IEEE Tarsus'a Hoş Geldiniz!</h1>
+            <p class="subtitle">IEEE HAKKINDA BİLGİ SAHİBİ OL</p>
+            <div class="hero-buttons">
+                <a href="https://www.ieee.org/" class="btn btn-outline">IEEE Global</a>
+                <a href="https://www.ieee.org.tr/" class="btn btn-filled">IEEE Türkiye</a>
+            </div>
+            <p class="subtitle">IEEE TARSUS ETKİNLİKLERİNDEN HABERDAR OL</p>  
+            <a href="#" class="btn btn-main" id="main-events-btn">Etkinliklerimiz</a>
+        </main>
+    
+
+    <!-- about-section başlangıcı -->
+
+<section class="neden-ieee">
+  <h2>NEDEN IEEE TARSUS</h2>
+  <p class="neden-subtitle">Sen de IEEE Tarsus'a Katıl ve Sınırlarını Keşfet</p>
+  <div class="neden-cards">
+    <div class="neden-card animate-left">
+      <div class="neden-icon">
+        <!-- Grup SVG İkonu -->
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="12" fill="#3896b3"/>
+          <g>
+            <circle cx="12" cy="11" r="3" fill="#fff"/>
+            <ellipse cx="12" cy="17" rx="6" ry="3" fill="#fff"/>
+            <circle cx="6.5" cy="13" r="2" fill="#fff" opacity="0.7"/>
+            <circle cx="17.5" cy="13" r="2" fill="#fff" opacity="0.7"/>
+          </g>
+        </svg>
+      </div>
+      <h3>HERKES İÇİN IEEE</h3>
+      <p>
+        IEEE, mühendislik ve teknoloji alanlarında dünyanın en büyük ve en saygın mesleki topluluğudur. Kâr amacı gütmeyen bu yapı; bilginin üretilmesi, paylaşılması ve uygulanması süreçlerinde insanlığın yararını gözetir. 160’tan fazla ülkede 400.000’i aşkın üyesiyle küresel bir etkileşim ağı sunan IEEE, Türkiye’de de 1400’den fazla aktif üyesiyle çalışmalarını sürdürmektedir. Öğrencilere ve profesyonellere yönelik seminerler, teknik geziler, kariyer etkinlikleri ve AR-GE odaklı projelerle IEEE; teknoloji odaklı bir topluluk olmanın ötesinde, herkes için ilham verici bir gelişim ortamı sağlar. “Herkes için Mühendislik” anlayışıyla hareket eden IEEE, teknolojiyi yalnızca üretmekle kalmaz, onu toplumun hizmetine sunmayı da temel misyonu olarak benimser.
+      </p>
+    </div>
+    <div class="neden-card animate-right">
+      <div class="neden-icon">
+        <!-- Üniversite SVG İkonu -->
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="12" fill="#3896b3"/>
+          <rect x="6" y="10" width="12" height="2" fill="#fff"/>
+          <rect x="8" y="12" width="2" height="4" fill="#fff"/>
+          <rect x="14" y="12" width="2" height="4" fill="#fff"/>
+          <rect x="11" y="12" width="2" height="4" fill="#fff"/>
+          <rect x="6" y="16" width="12" height="2" fill="#fff"/>
+        </svg>
+      </div>
+      <h3>IEEE TARSUS</h3>
+      <p >
+        IEEE Tarsus, 2024 yılında vizyoner ve yenilikçi bir grup birinci sınıf mühendislik öğrencisi tarafından kurulmuştur. Kurulduğu günden bu yana mühendislik öğrencilerini sektörle buluşturmayı hedefleyen topluluk; teknik geziler, zirveler ve webinarlar gibi etkinliklerle öğrencilerin hem mesleki hem de kişisel gelişimine katkı sağlamayı amaçlamaktadır. “Aranan mühendis” anlayışını benimseyen IEEE Tarsus, mühendislik eğitimini sadece teorik bilgilerle sınırlı bırakmayıp, öğrencileri iş dünyasının dinamikleriyle erken tanıştırarak onları geleceğe hazırlayan güçlü bir öğrenci yapılanmasıdır.
+      </p>
+    </div>
+    <div class="neden-card animate-left">
+      <div class="neden-icon">
+        <!-- Kitap SVG İkonu -->
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="12" fill="#3896b3"/>
+          <rect x="8" y="7" width="8" height="10" rx="1" fill="#fff"/>
+          <rect x="10" y="9" width="4" height="1" fill="#3896b3"/>
+          <rect x="10" y="11" width="4" height="1" fill="#3896b3"/>
+        </svg>
+      </div>
+      <h3>HER ŞEY DERS DEĞİL</h3>
+      <p>
+        Mühendislik eğitimi yalnızca sınavlar, ödevler ve teorik bilgilerden ibaret değildir. Gerçek öğrenme, sınıfın dışına taşabilen ve hayatla bütünleşebilen deneyimlerle mümkündür. Bu yüzden “her şey ders değil” diyoruz. Takım çalışmaları, sosyal sorumluluk projeleri, teknik geziler, girişimcilik etkinlikleri, kulüp faaliyetleri ve ilham veren sohbetler… Tüm bunlar bir öğrencinin bir mühendis adayının bakış açısını genişleten, vizyonunu besleyen ve onu geleceğe daha donanımlı hazırlayan unsurlardır. IEEE Tarsus olarak biz, ders dışında da öğrenmenin yollarını arıyor; hem mesleki hem de insani anlamda gelişimi önceliyoruz. Çünkü bizce iyi bir mühendis, sadece bilen değil, düşünen, sorgulayan, paylaşan ve üreten kişidir.
+      </p>
+    </div>
+  </div>
+    <!-- about-section bitişi -->
+</section>
+
+
+
+
+<h2 style="color: black; text-align: center;" >EKİBİMİZLE TANIŞIN</h2>
+<div class="line"></div>
+
+<div class="team-container">
+  <div class="team-member">
+    <img src="img/berkay-yk.jpg" alt="Person 1">
+    <h3 style="color: #666 !important">MUHAMMED BERKAY KIRNIT</h3>
+    <p>Yönetim kurulu başkanı</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/mberkayk%C4%B1rn%C4%B1t/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/berkaikirnit" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:berkaykirnit01@outlook.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+
+  <div class="team-member">
+    <img src="img/kadir-yk.jpg" alt="Person 2">
+    <h3 style="color: #666 !important">KADİRCAN ASLAN</h3>
+    <p>Genel sekreter</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/kadircan-aslan-3a8478293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/kadircn_aslan?igsh=MTljbmN0cmk2MzJydQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:aslankadircan0@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+
+  <div class="team-member">
+    <img src="img/emre-yk.jpg" alt="Person 3">
+    <h3 style="color: #666 !important">EMRE OLCAY ARAS</h3>
+    <p>Yönetim kurulu başkan yardımcısı</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/emre-olcay-aras-778615359" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/emreolcayaras" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:emreolcayaras@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+
+  <div class="team-member">
+    <img src="img/fatih-yk.png" alt="Person 4">
+    <h3 style="color: #666 !important">FATİH ARSLAN</h3>
+    <p>Yönetim kurulu başkan yardımcısı</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/fatih-arslan-b9797b380/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/arslnffth" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:fatiharslanmac@outlook.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="background"></div>
+    <div class="background-texture"></div>
+
+    <section class="carousel">
+      <h2 class="categories__title">Etkinliklerimiz</h2>
+      <div class="carousel__container">
+        <div class="carousel-item">
+          <img
+            class="carousel-item__img"
+            src="img/etkinlik-img1.webp"
+            alt="people"
+          />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">Descriptive Title</h5>
+            <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            class="carousel-item__img"
+            src="img/etkinlik-img2.webp"
+            alt="people"
+          />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">Descriptive Title</h5>
+            <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            class="carousel-item__img"
+            src="img/etkinlik-img3.webp"
+            alt="people"
+          />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">Descriptive Title</h5>
+            <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+          </div>
+        </div>
+        
+        <div class="carousel-item">
+          <img
+            class="carousel-item__img"
+            src="img/etkinlik-img4.webp"
+            alt="people"
+          />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">Descriptive Title</h5>
+            <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            class="carousel-item__img"
+            src="img/etkinlik-img5.webp"
+            alt="people"
+          />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">Descriptive Title</h5>
+            <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img
+            class="carousel-item__img"
+            src="img/etkinlik-img6.webp"
+            alt="people"
+          />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">Descriptive Title</h5>
+            <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            class="carousel-item__img"
+            src="img/etkinlik-img7.webp"
+            alt="people"
+          />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">Descriptive Title</h5>
+            <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            class="carousel-item__img"
+            src="img/etkinlik-img8.webp"
+            alt="people"
+          />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">Descriptive Title</h5>
+            <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            class="carousel-item__img"
+            src="img/etkinlik-img9.webp"
+            alt="people"
+          />
+          <div class="carousel-item__details">
+            <div class="controls">
+            </div>
+            <h5 class="carousel-item__details--title">Descriptive Title</h5>
+            <h6 class="carousel-item__details--subtitle">Date and Duration</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="count">
+      <ul>
+        <li><img src="sale.png" alt="Katılımcı" class="count-icon">500+ Katılımcı</li>
+        <li><img src="webinar.png" alt="Webinar" class="count-icon">3 Webinar</li>
+        <li><img src="factory.png" alt="Teknik Gezi" class="count-icon">2 Teknik Gezi</li>
+        <li><img src="instructors.png" alt="Teknoloji Zirvesi" class="count-icon">1 Teknoloji Zirvesi</li>
+      </ul>
+    </section>
+
+
+    <!-- Sponsor Section -->
+    <section class="sponsor-section">
+      <h2 class="sponsor-title">2024-2025 YILI PLATİN SPONSORUMUZ</h2>
+      <div class="sponsor-card">
+        <img src="photo_2025-07-18_15-46-38.jpg" alt="Sponsor Logo" class="sponsor-logo">
+        <div class="sponsor-name">Güven Grup A.Ş.</div>
+      </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="contact-container">
+          <div class="contact-header">
+              <h2>BİZİMLE<br><span>İLETİŞİM KURUN</span></h2>
+              <p>Bize Ulaşmak Bir Tık Uzağınızda!</p>
+          </div>
+          <div class="contact-content">
+              <div class="contact-info">
+                  <div class="contact-card">
+                      <div class="icon-circle">
+                          <i class="fas fa-envelope"></i>
+                      </div>
+                      <h3>Email</h3>
+                      <p>ieee@tarsus.edu.tr</p>
+                      <a href="mailto:ieee@tarsus.edu.tr" class="contact-link">Mail Gönder</a>
+                  </div>
+                  <div class="contact-card">
+                      <div class="icon-circle">
+                          <i class="fas fa-phone"></i>
+                      </div>
+                      <h3>WhatsApp</h3>
+                      <p class="phone-link">+90 542 844 7131</p>
+                      <a href="#" class="contact-link">Mesaj Gönder</a>
+                  </div>
+                  <div class="contact-card">
+                      <div class="icon-circle">
+                          <i class="fas fa-map-marker-alt"></i>
+                      </div>
+                      <h3>Konum</h3>
+                      <p>Mersin, Türkiye</p>
+                      <a href="https://www.google.com/maps?q=Mersin,Turkey" target="_blank" class="contact-link">Haritada Aç</a>
+                  </div>
+              </div>
+              <div class="contact-form">
+                  <form action="https://formspree.io/f/mkgzodwq" method="POST">
+                      <div class="form-group">
+                          <input type="text" name="name" placeholder="Ad Soyad" required>
+                      </div>
+                      <div class="form-group">
+                          <input type="email" name="email" placeholder="Email" required>
+                      </div>
+                      <div class="form-group">
+                          <input type="text" name="subject" placeholder="Konu" required>
+                      </div>
+                      <div class="form-group">
+                          <textarea name="message" placeholder="Mesajınız" required></textarea>
+                      </div>
+                      <button type="submit" class="submit-btn">
+                          GÖNDER
+                          <div class="arrow-icon">→</div>
+                      </button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </section>
+
+<!-- Google Maps -->
+<div class="map-container">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3188.2925723579197!2d34.846628975892855!3d36.95506877220335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527e0ee95555555%3A0x76317d01c5fcf2e8!2sTarsus%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1752612246175!5m2!1str!2str"
+    width="100%"
+    height="350"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <img src="uni-logo.png " alt="Logo" class="footer-logo">
+      <p>Tarsus Üniversitesi <br>
+        Takbaş, Kartaltepe Sokak 33400<br>33400 Tarsus/Mersin<br></p>
+    </div>
+    <div class="footer-col">
+      <h4>Sosyal Medya Hesaplarımız</h4>
+      <ul>
+        <li><a href="https://www.linkedin.com/company/ieee-tarsus-university-student-branch"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i> İnstagram</a></li>
+        <li><a href="mailto:ieee@tarsus.edu.tr"><i class="fas fa-envelope"></i> Email</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Ana sayfa</h4>
+      <ul>
+        <li><a href="#">Hakkımızda</a></li>
+        <li><a href="#">Komitelerimiz</a></li>
+        <li><a href="#">Yönetim Kadromuz</a></li>
+        <li><a href="#">Etkinliklerimiz</a></li>
+        <li><a href="#">Sponsorlar</a></li>
+        <li><a href="#">İletişim</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Topluluğa Katıl</h4>
+      <p>Topluluğa katılmak için form gönder!</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Email">
+        <button type="submit">Gönder</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Copyright © 2025 IEEE Tarsus University Student Branch.</span>
+  </div>
+</footer>
+
+
+<script>
+  // Hamburger menü aç/kapat
+  const navbarToggle = document.getElementById('navbar-toggle');
+  const navbarMenu = document.getElementById('navbar-menu');
+  const dropdowns = document.querySelectorAll('.navbar-menu .dropdown');
+  
+  navbarToggle.addEventListener('click', function() {
+    navbarMenu.classList.toggle('open');
+  });
+  
+  // Mobilde dropdown aç/kapat
+  if (window.innerWidth <= 900) {
+    dropdowns.forEach(drop => {
+      drop.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('open');
+      });
+    });
+  }
+
+  // Hakkımızda linkine tıklanınca neden-ieee bölümüne scroll
+  // document.getElementById('about-link').addEventListener('click', function(e) {
+  //   e.preventDefault();
+  //   document.querySelector('.neden-ieee').scrollIntoView({ behavior: 'smooth' });
+  // });
+
+  // Etkinliklerimiz linkine tıklanınca carousel bölümüne scroll
+  document.getElementById('events-link').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('.carousel').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  // Sponsorlar linkine tıklanınca sponsor-section bölümüne scroll
+  document.getElementById('sponsor-link').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('.sponsor-section').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  // İletişim linkine tıklanınca contact-section bölümüne scroll
+  document.getElementById('contact-link').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('.contact-section').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  // Ana sayfadaki Etkinliklerimiz butonuna tıklanınca etkinliklerimiz bölümüne scroll
+  document.getElementById('main-events-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('.carousel').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
