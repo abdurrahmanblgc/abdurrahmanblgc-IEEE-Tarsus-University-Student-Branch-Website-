@@ -21,6 +21,10 @@
     left: 0;
     z-index: 10;
 }
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
 
 .navbar-left {
     display: flex;
