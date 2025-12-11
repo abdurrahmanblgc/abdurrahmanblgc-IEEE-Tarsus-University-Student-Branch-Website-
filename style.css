@@ -1311,7 +1311,7 @@ text-align: center;
   }
 
   .zirve-logo-box {
-      width: 120px;
+      display: none;
   }
 
   .zirve-video-container {
@@ -1329,7 +1329,7 @@ text-align: center;
   }
 
   .zirve-logo-box {
-      width: 100px;
+      display; none;
   }
 }
 
