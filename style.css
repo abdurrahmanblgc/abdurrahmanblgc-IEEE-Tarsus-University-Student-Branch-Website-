@@ -1241,9 +1241,98 @@ text-align: center;
     gap: 12px;
   }
 
-
-
 }
+
+/* Zirve Bölümü */
+.zirve-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.zirve-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Wrapper */
+.zirve-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: nowrap;
+}
+
+/* Logolar */
+.zirve-logo-box {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.zirve-logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
+}
+
+/* Video */
+.zirve-video-container {
+  width: 70%;
+  max-width: 350px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+.zirve-video {
+  width: 100%;
+  display: block;
+}
+
+/* 📱 Tablet ve Mobil */
+@media (max-width: 900px) {
+  .zirve-wrapper {
+      gap: 15px;
+  }
+
+  .zirve-logo-box {
+      width: 80px;
+  }
+}
+
+/* 📱 Mobil Görünüm */
+@media (max-width: 700px) {
+  .zirve-wrapper {
+      flex-direction: column;
+  }
+
+  .zirve-logo-box {
+      width: 120px;
+  }
+
+  .zirve-video-container {
+      width: 100%;
+  }
+
+  .zirve-title {
+      font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .zirve-title {
+      font-size: 22px;
+  }
+
+  .zirve-logo-box {
+      width: 100px;
+  }
+}
+
 
 
 
